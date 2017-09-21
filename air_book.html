@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<title>Book Now</title>
+<link rel="stylesheet" href="air_css.css">
+  
+<script>
+function validateForm() {
+   
+
+ var c= document.getElementById("trip");
+   if( c.checked == false)
+{alert("Enter trip");
+return false;
+}
+
+ var d= document.getElementById("agree");
+   if(d.checked == false)
+{alert("Please agree");
+return false;
+}
+
+}
+</script>
+</head>
+<body>
+<div id="container" style="width:1350px">
+
+<div id="header" style="background-color:cyan;">
+<h1 style="margin-bottom:0;text-align:center;">ABN AIRLINES</h1></div>
+<div id="box-one">
+<p style="color:white">BEYOND      &nbsp  &nbsp &nbsp &nbsp TRAVEL</p>
+</div>
+<center><h1><b>BOOK NOW</b></h1></center><hr>
+<div class="nav">
+      
+<div class="container">
+        
+<ul >
+          
+<li><a href="air.html">Home</a></li>
+                 
+<li><a href="air_signup.html">Sign Up</a></li> 
+<li><a href="air_login.html">Log In</a></li>
+         
+ <li><a href="air_flights.html">Flights</a></li>
+       
+ <li><a href="air_book.html">Book Now</a></li>
+    
+</ul>
+      
+</div>
+    
+</div>
+
+ 
+<hr>
+<form name="myForm" action="abcd.html" onsubmit="return validateForm();" method="post">
+<center>ORIGIN:<select name="city">
+<option value="India">Mumbai</option>
+<option value="India">Delhi</option>
+<option value="India">Kolkata</option>
+<option value="India">Chennai</option>
+<option value="India">Goa</option>
+<option value="India">Banglore</option>
+<option value="India">Pune</option>
+</select></center><br>
+
+<center>DESTINATION:<select name="city">
+<option value="India">Mumbai</option>
+<option value="India">Delhi</option>
+<option value="India">Kolkata</option>
+<option value="India">Chennai</option>
+<option value="India">Goa</option>
+<option value="India">Banglore</option>
+<option value="India">Pune</option>
+</select></center><br>
+<center>TRAVEL TYPE:<br><input type="radio" name="trip" value="male" id="trip">One Time<br>
+<input type="radio" name="trip" value="female" id="trip">Round Trip<br></center><br>
+
+<center>TRAVEL CLASS:<br><input type="radio" name="trip" value="male" id="trip">Economy<br>
+<input type="radio" name="trip" value="female" id="trip">Business<br></center><br>
+
+
+<center>PAYMENT MODE:<br><input type="radio" name="pay" value="male" id="pay">Online<br>
+<input type="radio" name="pay" value="female" id="pay">Cheque<br></center><br>
+
+
+<center><input type="checkbox" name="Agree" value="English" id="agree">Agree Terms and Conditions</center><br>
+<center><input type="submit" value="Book">
+<input type="Reset" value="Reset"></center>
+</form>
+</body>
+</html>

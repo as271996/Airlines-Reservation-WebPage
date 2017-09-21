@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<title>Form</title>
+<link rel="stylesheet" href="air_css.css">
+  
+<script>
+function validateForm() {
+    
+
+    var z = document.forms.myForm.Email.value;
+    var atpos = z.indexOf("@");
+    var dotpos = z.lastIndexOf(".");
+    if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=z.length) {
+        alert("Not a valid e-mail address");
+        return false;
+
+    }
+
+var b =  document.forms.myForm.pwd.value;
+if(b=="")
+{
+alert("Please Enter Your Password");
+
+return false;
+}
+
+
+ var d= document.getElementById("agree");
+   if(d.checked == false)
+{alert("Please agree");
+return false;
+}
+
+}
+</script>
+</head>
+<body>
+<div id="header" style="background-color:yellow;">
+<h1 style="margin-bottom:0;text-align:center;">ABN AIRLINES</h1></div>
+<div id="box-one">
+<p style="color:white">BEYOND      &nbsp  &nbsp &nbsp &nbsp TRAVEL</p>
+</div>
+<center><h1><b>LOGIN   </b></h1></center><hr>
+<div class="nav">
+      
+<div class="container">
+        
+<ul >
+          
+<li><a href="air.html">Home</a></li>
+                 
+<li><a href="air_signup.html">Sign Up</a></li> 
+<li><a href="air_login.html">Log In</a></li>
+         
+ <li><a href="air_flights.html">Flights</a></li>
+       
+ <li><a href="air_book.html">Book Now</a></li>
+    
+</ul>
+      
+</div>
+    
+</div>
+
+ 
+<hr>
+<form name="myForm" action="abcd.html" onsubmit="return validateForm();" method="post">
+
+
+<center>Email-id: <input type="text" name="Email" ></center><br>
+<center>Password: <input type="password" name="pwd"></center><br>
+<center><input type="submit" value="Sign In">
+<input type="Reset" value="Reset"></center><br>
+
+<center><input type="checkbox" name="Agree" value="English" id="agree">Stay signed in</center><br>
+
+</form>
+</body>
+</html>

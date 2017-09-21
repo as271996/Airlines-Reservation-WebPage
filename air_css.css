@@ -1,0 +1,64 @@
+.nav a {
+  
+color: red;
+  
+font-size: 25px;
+  
+font-weight: bold;
+ 
+ padding: 14px 10px;
+  
+text-transform: uppercase;
+
+margin-left:100px;
+}
+
+
+
+
+.nav li{
+display:inline;
+}
+
+
+
+.second {
+  
+background-image:url('airplane.jpg');
+  
+height: 450px;
+  
+background-repeat: no-repeat;
+  
+background-size: cover;
+
+}
+
+
+
+.second .container {
+  
+position: relative;
+  
+top:100px;
+
+color:white;
+}
+
+
+.second h1{
+font-size:48px;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#box-one {
+
+background-color: gray;
+text-align:center;
+}

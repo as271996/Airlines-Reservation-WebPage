@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+<title>Sign Up</title>
+<link rel="stylesheet" href="air_css.css">
+  
+<script>
+function validateForm() {
+    var x = document.forms.myForm.fname.value;
+    if (x==null || x=="") {
+        alert("First name must be filled out");
+        return false;
+    }
+
+    var y = document.forms.myForm.lname.value;
+    if (y==null || y=="") {
+        alert("last name must be filled out");
+        return false;
+    }
+
+    var z = document.forms.myForm.Email.value;
+    var atpos = z.indexOf("@");
+    var dotpos = z.lastIndexOf(".");
+    if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=z.length) {
+        alert("Not a valid e-mail address");
+        return false;
+
+    }
+
+var b =  document.forms.myForm.pwd.value;
+if(b=="")
+{
+alert("Please Enter Your Password");
+
+return false;
+}
+
+var a =  document.forms.myForm.pwd2.value;
+{if(a=="")
+{
+alert("Please Re-Enter Your Password");
+
+return false;
+}
+
+ if (document.forms.myForm.pwd.value != document.forms.myForm.pwd2.value)
+    {
+        alert("Password does not match");
+        return false;
+    }
+}
+
+ var c= document.getElementById("sex");
+   if( c.checked == false)
+{alert("Enter Gender");
+return false;
+}
+
+ var d= document.getElementById("agree");
+   if(d.checked == false)
+{alert("Please agree");
+return false;
+}
+
+}
+</script>
+</head>
+<body>
+<center><h1><b>SIGN UP   FORM</b></h1></center><hr>
+<div class="nav">
+      
+<div class="container">
+        
+<ul >
+          
+<li><a href="air.html">Home</a></li>
+                 
+<li><a href="air_signup.html">Sign Up</a></li> 
+<li><a href="air_login.html">Log In</a></li>
+         
+ <li><a href="air_flights.html">Flights</a></li>
+       
+ <li><a href="air_book.html">Book Now</a></li>
+    
+</ul>
+      
+</div>
+    
+</div>
+
+ 
+<form name="myForm" action="abcd.html" onsubmit="return validateForm();" method="post">
+<center>First name: <input type="text" name="fname"></center><br>
+<center>Last name: <input type="text" name="lname"></center><br>
+<center>Email-id: <input type="text" name="Email" ></center><br>
+<center>Password: <input type="password" name="pwd"></center><br>
+<center>Reenter Password: <input type="password" name="pwd2"></center><br>
+<center>Gender:<br><input type="radio" name="sex" value="male" id="sex">Male<br>
+<input type="radio" name="sex" value="female" id="sex">Female<br></center>
+<center>Country:<select name="country">
+<option value="India">India</option>
+<option value="USA">USA</option>
+<option value="UAE">UAE</option>
+<option value="UK">UK</option>
+</select></center><br>
+<center>Language known:<br></center>
+<center><input type="checkbox" name="language" value="English">English</center><br>
+<center><input type="checkbox" name="language" value="Marathi">Marathi</center><br>
+<center>Alternate Email-id: <input type="Email-id2" name="Email-id2"></center><br>
+<center><input type="checkbox" name="Agree" value="English" id="agree">Agree</center><br>
+<center><input type="submit" value="Submit">
+<input type="Reset" value="Reset"></center>
+</form>
+</body>
+</html>
